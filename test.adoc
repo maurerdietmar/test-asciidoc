@@ -1,31 +1,17 @@
-include::attributes.txt[]
-
 {pve} Documentation Index
 =========================
 
+ZFS Performance Tips
+****
+ZFS uses a lot of memory, so it is best to add additional 8-16GB RAM
+if you want to use ZFS.
 
-{pve} Administration Guide
---------------------------
+.Use fast SSD as write cache
 
-[width="100%",options="header"]
-|===========================================================
-|Format               |Download link
-|Printable version    |link:pve-admin-guide.pdf[]
-|Online HTML version  |link:pve-admin-guide.html[]
-|E-Book version       |link:pve-admin-guide.epub[]
-|===========================================================
+ZFS provides the feature to use a fast SSD drive as write cache. The
+write cache is called the ZFS Intent Log (ZIL). You can add that after
+installation using the following command:
 
-{pve} Manual Pages
-------------------
-
-[width="100%",options="header"]
-|===========================================================
-| Command name |Download link
-| qm           | link:qm.1.html[qm.1]
-| pct          | link:pct.1.html[pct.1]
-| pvesm        | link:pvesm.1.html[pvesm.1]
-| pveum        | link:pveum.1.html[pveum.1]
-| vzdump       | link:vzdump.1.html[vzdump.1]
-| pve-firewall | link:pve-firewall.8.html[pve-firewall.8]
-|===========================================================
+ zpool add <pool-name> log </dev/path_to_fast_ssd>
+****
 
