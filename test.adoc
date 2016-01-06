@@ -1,6 +1,7 @@
+include::attributes.txt[]
 {pve} Documentation Index
 =========================
-include::attributes.txt[]
+
 
 {pve} Administration Guide
 --------------------------
