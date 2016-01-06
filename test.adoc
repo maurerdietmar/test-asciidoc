@@ -1,8 +1,6 @@
 include::attributes.txt[]
 {pve} Documentation Index
 =========================
-:data-uri:
-:icons:
 
 {pve} Administration Guide
 --------------------------
